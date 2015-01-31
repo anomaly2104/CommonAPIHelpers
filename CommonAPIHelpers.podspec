@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'TDTChocolate/FoundationAdditions'
-  s.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0'
+  s.dependency 'GoogleAnalytics-iOS-SDK'
 
   s.ios.deployment_target = '7.0'
   s.header_mappings_dir = 'CommonAPIHelpers'
