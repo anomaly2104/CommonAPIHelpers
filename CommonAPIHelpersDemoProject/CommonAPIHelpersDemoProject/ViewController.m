@@ -11,5 +11,8 @@
   [super viewWillAppear:animated];
   [self cah_sendScreenViewEvent];
 }
+- (IBAction)tapItPressed:(id)sender {
+  NSLog(@"Tap it pressed");
+}
 
 @end
