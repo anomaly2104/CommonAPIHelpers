@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:CommonAPIHelpers"
+      name = "CommonAPIHelpers">
+      <FileRef
+         location = "group:CAHGoogleAnalytics.h">
+      </FileRef>
+      <FileRef
+         location = "group:CAHGoogleAnalytics.m">
+      </FileRef>
+      <FileRef
+         location = "group:CommonAPIHelpers.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIViewController+CAHGoogleAnalyticsAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIViewController+CAHGoogleAnalyticsAdditions.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:CommonAPIHelpersDemoProject/CommonAPIHelpersDemoProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommonAPIHelpersDemoProject/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
