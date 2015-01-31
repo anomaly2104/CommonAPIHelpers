@@ -1,6 +1,6 @@
 PODS:
   - CommonAPIHelpers (1.0.0):
-    - GoogleAnalytics-iOS-SDK (~> 3.0)
+    - GoogleAnalytics-iOS-SDK
     - TDTChocolate/FoundationAdditions
   - GoogleAnalytics-iOS-SDK (3.10):
     - GoogleAnalytics-iOS-SDK/Core (= 3.10)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CommonAPIHelpers: e36deca0f31622c7197822e8f96594d4e039c890
+  CommonAPIHelpers: 49ea10576a460e40afee636b511ce7a9ea7212d2
   GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
   TDTChocolate: f4c2f4dd700b0143fb36cf3dd5817260f7a970fb
 
