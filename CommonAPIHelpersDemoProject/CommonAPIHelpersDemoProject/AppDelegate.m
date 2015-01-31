@@ -13,6 +13,7 @@ static NSString * const GAITrackingID = @"UA-46407224-3";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   CAHGoogleAnalytics *sharedCAH = [CAHGoogleAnalytics sharedInstance];
   [sharedCAH setTrackingID:GAITrackingID];
+  [sharedCAH sendEventHitFromCategory:@"app" action:@"launch" label:nil value:nil];
   return YES;
 }
 
