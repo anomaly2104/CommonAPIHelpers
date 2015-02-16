@@ -4,6 +4,19 @@
    <Group
       location = "group:CommonAPIHelpers"
       name = "CommonAPIHelpers">
+      <Group
+         location = "container:"
+         name = "HUD">
+         <FileRef
+            location = "group:CommonAPIHelpers/HUD/MBProgressHUD+CAHAdditions.h">
+         </FileRef>
+         <FileRef
+            location = "group:CommonAPIHelpers/HUD/MBProgressHUD+CAHAdditions.m">
+         </FileRef>
+         <FileRef
+            location = "group:CommonAPIHelpers/HUD/HUD.xcassets">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:CAHGoogleAnalytics.h">
       </FileRef>
