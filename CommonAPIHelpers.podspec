@@ -13,10 +13,11 @@ Pod::Spec.new do |s|
 
   s.dependency 'TDTChocolate/FoundationAdditions'
   s.dependency 'GoogleAnalytics-iOS-SDK'
+  s.dependency 'MBProgressHUD', '~> 0.9'
 
   s.ios.deployment_target = '7.0'
   s.header_mappings_dir = 'CommonAPIHelpers'
 
-  s.source_files = [ 'CommonAPIHelpers/*.{h,m}']
-  s.public_header_files = 'NSData+CommonAPIHelpers/*.h'
+  s.source_files = [ 'CommonAPIHelpers/*.{h,m}', 'CommonAPIHelpers/HUD/*.{h,m}']
+  s.resources = [ 'CommonAPIHelpers/HUD/*.{xcassets}']
 end
