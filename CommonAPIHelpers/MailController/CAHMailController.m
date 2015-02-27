@@ -61,17 +61,32 @@
 
 
 #pragma mark Current App Details
+
+- (NSString *)currentFullVersion {
+  return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+}
+
 - (NSString *)currentAppName {
   return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleExecutable"];
 }
 
 #pragma mark -
 
+- (NSString *)appSpecificInfo {
+  NSString *appInfo = [NSString stringWithFormat:@"%@: %@",
+                          APP_VERSION,
+                          [self currentFullVersion]];
+  if (self.appSpecificDebugInfo != nil) {
+    [appInfo stringByAppendingFormat:@"\n%@", self.appSpecificDebugInfo];
+  }
+  return appInfo;
+}
+
 - (NSString *)bodyWithDefaultMessage:(NSString *)message {
   return [NSString stringWithFormat:@"\n\n\n\n-------------------------------\n%@\n\n%@\n%@\n%@",
           DO_NOT_WRITE_BELOW,
           message,
-          self.appSpecificDebugInfo,
+          [self appSpecificInfo],
           [self systemInfo]];
 }
 
