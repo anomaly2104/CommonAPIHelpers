@@ -15,18 +15,15 @@
 
 @interface CAHMailController () <MFMailComposeViewControllerDelegate>
 
-@property (nonatomic) NSString *appName;
 @property (nonatomic) NSString *appSpecificDebugInfo;
 
 @end
 
 @implementation CAHMailController
 
-- (instancetype)initWithAppName:(NSString *)appName
-           appSpecificDebugInfo:(NSString *)appSpecificDebugInfo {
+- (instancetype)initWithAppSpecificDebugInfo:(NSString *)appSpecificDebugInfo {
   self = [super init];
   if (self) {
-    _appName = appName;
     _appSpecificDebugInfo = appSpecificDebugInfo;
   }
   return self;
@@ -37,7 +34,7 @@
 - (void)showContactRequestFromPresentingViewController:(UIViewController *)viewController
                                           contactEmail:(NSString *)contactEmail {
   NSString *subject = [NSString stringWithFormat:CONTACT_REQUEST_MAIL_SUBJECT,
-                       self.appName];
+                       [self currentAppName]];
   NSString *body = [self bodyWithDefaultMessage:CONTACT_REQUEST_MAIL_BODY];
   [self showMailComposerWithSubject:subject
                                body:body
@@ -50,7 +47,7 @@
 - (void)showFeatureRequestFromPresentingViewController:(UIViewController *)viewController
                                           requestEmail:(NSString *)requestEmail {
   NSString *subject = [NSString stringWithFormat:FEATURE_REQUESTS_MAIL_SUBJECT,
-                       self.appName];
+                       [self currentAppName]];
   NSString *body = [self bodyForFeatureRequestsMail];
   [self showMailComposerWithSubject:subject
                                body:body
@@ -60,6 +57,12 @@
 
 - (NSString *)bodyForFeatureRequestsMail {
   return [self bodyWithDefaultMessage:FEATURE_REQUESTS_MAIL_BODY];
+}
+
+
+#pragma mark Current App Details
+- (NSString *)currentAppName {
+  return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleExecutable"];
 }
 
 #pragma mark -
