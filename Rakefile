@@ -51,9 +51,9 @@ def release(**options)
   end
 
   replace_spec_version(podspec_path, current_version, new_version)
-  sh "cd Tests && pod update --no-repo-update TDTChocolate"
+  sh "cd CommonAPIHelpersDemoProject && pod update --no-repo-update"
 
-  sh "git commit -m 'Update version to #{new_version}' -- #{podspec_path} Tests/Podfile.lock"
+  sh "git commit -m 'Update version to #{new_version}' -- #{podspec_path} CommonAPIHelpersDemoProject/Podfile.lock"
 
   tag_with_message(current_version, new_version)
 
