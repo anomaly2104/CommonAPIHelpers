@@ -6,6 +6,16 @@
       name = "CommonAPIHelpers">
       <Group
          location = "container:"
+         name = "MailController">
+         <FileRef
+            location = "group:CommonAPIHelpers/MailController/CAHMailController.h">
+         </FileRef>
+         <FileRef
+            location = "group:CommonAPIHelpers/MailController/CAHMailController.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "HUD">
          <FileRef
             location = "group:CommonAPIHelpers/HUD/MBProgressHUD+CAHAdditions.h">
