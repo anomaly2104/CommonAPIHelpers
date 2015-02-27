@@ -55,7 +55,7 @@ def release(**options)
 
   sh "git commit -m 'Update version to #{new_version}' -- #{podspec_path} CommonAPIHelpersDemoProject/Podfile.lock"
 
-  tag_with_message(current_version, new_version)
+  #tag_with_message(current_version, new_version)
 
   sh "git push origin master"
   sh "git push origin #{new_version}"
