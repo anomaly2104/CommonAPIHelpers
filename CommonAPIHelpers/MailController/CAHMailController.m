@@ -107,6 +107,7 @@
                           recipient:(NSString *)recipient {
   if (![MFMailComposeViewController canSendMail]) {
     //TODO: Show some error or notify caller about this error
+    NSLog(@"Could not open mail composer");
     return;
   }
   MFMailComposeViewController *mailComposeController = nil;
