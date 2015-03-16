@@ -21,6 +21,16 @@
   [self cah_sendScreenViewEvent];
 }
 
+- (void)infiniteTask {
+  sleep(3);
+}
+
+- (IBAction)infiniteTaskPressedSpinner {
+  [MBProgressHUD cah_showSpinnerToastWithText:@"Executing..."
+                               whileExecuting:@selector(infiniteTask)
+                                     onTarget:self];
+}
+
 - (IBAction)tapItPressed:(id)sender {
   NSLog(@"Tap it pressed");
   [MBProgressHUD cah_showSuccessToastWithText:@"succ"];

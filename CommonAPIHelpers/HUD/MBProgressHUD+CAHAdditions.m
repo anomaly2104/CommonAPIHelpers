@@ -37,4 +37,14 @@
   [MBProgressHUD cah_showErrorToastWithText:text view:keyWindow];
 }
 
++ (void)cah_showSpinnerToastWithText:(NSString *)text
+                      whileExecuting:(SEL)method
+                            onTarget:(id)target {
+  UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+  MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:keyWindow];
+  [keyWindow addSubview:HUD];
+  HUD.labelText = text;
+  [HUD showWhileExecuting:method onTarget:target withObject:nil animated:YES];
+}
+
 @end

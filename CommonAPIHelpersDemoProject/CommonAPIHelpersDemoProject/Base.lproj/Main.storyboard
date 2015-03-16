@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -43,12 +43,23 @@
                                     <action selector="requestFeaturePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFh-HK-2z6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-Ah-iTC">
+                                <rect key="frame" x="254" y="163" width="92" height="30"/>
+                                <state key="normal" title="Spinner toast">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="infiniteTaskPressedSpinner" destination="BYZ-38-t0r" eventType="touchUpInside" id="PvB-wE-Ob2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="vFB-a8-MTd" secondAttribute="centerX" id="7yA-a9-bYb"/>
                             <constraint firstAttribute="centerX" secondItem="9uo-Fi-94T" secondAttribute="centerX" id="JFk-DA-Ogt"/>
                             <constraint firstItem="vFB-a8-MTd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="O0x-ee-96I"/>
+                            <constraint firstItem="1a5-Ah-iTC" firstAttribute="top" secondItem="kox-J3-3iw" secondAttribute="bottom" constant="8" id="gY5-YN-tmr"/>
+                            <constraint firstAttribute="centerX" secondItem="1a5-Ah-iTC" secondAttribute="centerX" id="iIN-VC-n44"/>
                             <constraint firstAttribute="centerX" secondItem="kox-J3-3iw" secondAttribute="centerX" id="kKC-EY-tRd"/>
                             <constraint firstItem="kox-J3-3iw" firstAttribute="top" secondItem="9uo-Fi-94T" secondAttribute="bottom" constant="5" id="kgr-7Y-Qax"/>
                             <constraint firstItem="9uo-Fi-94T" firstAttribute="top" secondItem="vFB-a8-MTd" secondAttribute="bottom" constant="20" id="q9n-TW-uTK"/>
