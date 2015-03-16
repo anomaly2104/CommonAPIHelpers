@@ -1,5 +1,5 @@
 PODS:
-  - CommonAPIHelpers (0.1.2):
+  - CommonAPIHelpers (0.1.3):
     - GoogleAnalytics-iOS-SDK
     - MBProgressHUD (~> 0.9)
     - TDTChocolate/FoundationAdditions
@@ -7,7 +7,7 @@ PODS:
   - GoogleAnalytics-iOS-SDK (3.10):
     - GoogleAnalytics-iOS-SDK/Core (= 3.10)
   - GoogleAnalytics-iOS-SDK/Core (3.10)
-  - MBProgressHUD (0.9)
+  - MBProgressHUD (0.9.1)
   - TDTChocolate/FoundationAdditions (2.6.1)
   - UIDevice-Helpers (0.0.2)
 
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CommonAPIHelpers: e78363ab48dd1f44814bdbce58d2ea7b807e2817
+  CommonAPIHelpers: c2db789d4639b9108827863ad865f07af345cbce
   GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  MBProgressHUD: f3747dcbd45a9e855a6b0674550651e0b7ed250c
   TDTChocolate: f4c2f4dd700b0143fb36cf3dd5817260f7a970fb
   UIDevice-Helpers: 58bf1344ef602879d0d681e809e3b8c7cd744c2c
 
