@@ -12,6 +12,7 @@
   hud.mode = MBProgressHUDModeCustomView;
   hud.square = YES;
   hud.removeFromSuperViewOnHide = YES;
+  hud.userInteractionEnabled = NO;
   [hud hide:YES afterDelay:1.0];
 }
 
