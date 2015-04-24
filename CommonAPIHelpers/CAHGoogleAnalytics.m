@@ -53,6 +53,7 @@
 - (void)setTrackingID:(NSString *)trackingID {
   _trackingID = trackingID;
   self.tracker = [[GAI sharedInstance] trackerWithTrackingId:_trackingID];
+  self.tracker.allowIDFACollection = YES;
 }
 
 - (void)sendEventHitFromCategory:(NSString *)category
