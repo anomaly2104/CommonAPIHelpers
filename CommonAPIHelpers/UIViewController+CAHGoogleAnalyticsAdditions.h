@@ -1,12 +1,10 @@
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (CAHGoogleAnalyticsAdditions)
-
 /*
- Sends current UIViewController's class' name to google analytics.
- 
- @note Requires you to set 
+ This adds analytics functionality to all of your view controller classes.
+ Event for any view controller presented will be sent to google analytics 
+ automatically.
  */
-- (void)cah_sendScreenViewEvent;
+@interface UIViewController (CAHGoogleAnalyticsAdditions)
 
 @end

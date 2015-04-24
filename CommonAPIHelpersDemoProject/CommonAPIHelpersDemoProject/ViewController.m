@@ -16,11 +16,6 @@
   return _mailController;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  [self cah_sendScreenViewEvent];
-}
-
 - (void)infiniteTask {
   sleep(3);
 }
