@@ -84,8 +84,8 @@
 
 - (NSString *)bodyWithDefaultMessage:(NSString *)message {
   return [NSString stringWithFormat:@"\n\n\n\n-------------------------------\n%@\n\n%@\n%@\n%@",
-          DO_NOT_WRITE_BELOW,
           message,
+          DO_NOT_WRITE_BELOW,
           [self appSpecificInfo],
           [self systemInfo]];
 }
