@@ -51,15 +51,13 @@ def release(**options)
   end
 
   replace_spec_version(podspec_path, current_version, new_version)
+
   sh "cd CommonAPIHelpersDemoProject && pod update --no-repo-update"
 
-  sh "git commit -m 'Update version to #{new_version}' -- #{podspec_path} CommonAPIHelpersDemoProject/Podfile.lock"
-
-  tag_without_message(new_version)
-
+  sh "git commit -m 'Release #{new_version}' -- #{podspec_path} CommonAPIHelpersDemoProject/Podfile.lock"
+  sh "git tag #{new_version}"
   sh "git push origin master"
   sh "git push origin #{new_version}"
-  sh "pod trunk push #{podspec_path}"
 end
 
 def current_branch
@@ -132,26 +130,4 @@ def file_gsub!(path, pattern, replacement)
   text = File.read(path)
   text.gsub!(pattern, replacement)
   File.write(path, text)
-end
-
-def tag_without_message(new_version)
-  sh "git tag -a #{new_version} "
-end
-
-def tag_with_message(current_version, new_version)
-  path = '.git/RELEASE_NOTES.txt'
-
-  template =
-    "Release #{new_version}\n\n" +
-    "# Please enter the release notes for changes between the\n" +
-    "# previous release (#{current_version}) and this one (#{new_version}).\n" +
-    "# Lines starting with '#' will be ignored.\n" +
-    "\n"
-  File.write(path, template)
-  sh "git log ^#{current_version} HEAD | sed 's/^/# /' >>#{path}"
-
-  sh "$EDITOR #{path}"
-  sh "git tag -a #{new_version} -F '#{path}'"
-
-  File.delete(path)
 end
