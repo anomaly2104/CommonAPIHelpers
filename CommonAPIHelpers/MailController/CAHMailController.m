@@ -1,6 +1,7 @@
 #import "CAHMailController.h"
 #import <MessageUI/MessageUI.h>
 #import <UIDevice-Helpers/UIDevice-Helpers.h>
+#import "NSString+CAHProductNamesFromModelVersion.h"
 
 #define FEATURE_REQUESTS_MAIL_SUBJECT NSLocalizedString(@"Requesting feature for %@", @"Feature request mail subject")
 #define FEATURE_REQUESTS_MAIL_BODY NSLocalizedString(@"Write your feature request above this horizontal line.", @"Feature request mail subject")
@@ -91,12 +92,21 @@
           [self systemInfo]];
 }
 
+- (NSString *)currentDevice {
+  NSString *model = [[UIDevice currentDevice] modelVersion];
+  NSString *product = [model cah_productName];
+  if (product != nil) {
+    return [NSString stringWithFormat:@"%@ [%@]", product, model];
+  }
+  return [NSString stringWithFormat:@"%@", model];
+}
+
 - (NSString *)systemInfo {
   NSString *osString = [NSString stringWithFormat:@"%@ %@",
                         [[UIDevice currentDevice] systemName],
                         [[UIDevice currentDevice] systemVersion]];
-  return [NSString stringWithFormat:@"\n%@: %@\n%@: %@\n",
-          DEVICE_TEXT, [[UIDevice currentDevice] modelVersion],
+  return [NSString stringWithFormat:@"%@: %@\n%@: %@",
+          DEVICE_TEXT, [self currentDevice],
           OPERATING_SYSTEM_TEXT, osString];
 }
 
