@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iPhone1,1</key>
+	<string>iPhone</string>
+	<key>iPhone1,2</key>
+	<string>iPhone 3G</string>
+	<key>iPhone2,1</key>
+	<string>iPhone 3GS</string>
+	<key>iPhone3,1</key>
+	<string>iPhone 4 (GSM)</string>
+	<key>iPhone3,3</key>
+	<string>iPhone 4 (CDMA)</string>
+	<key>iPhone4,1</key>
+	<string>iPhone 4S</string>
+	<key>iPhone5,1</key>
+	<string>iPhone 5 (A1428)</string>
+	<key>iPhone5,2</key>
+	<string>iPhone 5 (A1429)</string>
+	<key>iPhone5,3</key>
+	<string>iPhone 5c (A1456/A1532)</string>
+	<key>iPhone5,4</key>
+	<string>iPhone 5c (A1507/A1516/A1529)</string>
+	<key>iPhone6,1</key>
+	<string>iPhone 5s (A1433/A1453)</string>
+	<key>iPhone6,2</key>
+	<string>iPhone 5s (A1457/A1518/A1530)</string>
+	<key>iPhone7,1</key>
+	<string>iPhone 6 Plus</string>
+	<key>iPhone7,2</key>
+	<string>iPhone 6</string>
+	<key>iPad1,1</key>
+	<string>iPad</string>
+	<key>iPad2,1</key>
+	<string>iPad 2 (Wi-Fi)</string>
+	<key>iPad2,2</key>
+	<string>iPad 2 (GSM)</string>
+	<key>iPad2,3</key>
+	<string>iPad 2 (CDMA)</string>
+	<key>iPad2,4</key>
+	<string>iPad 2 (Wi-Fi, revised)</string>
+	<key>iPad2,5</key>
+	<string>iPad mini (Wi-Fi)</string>
+	<key>iPad2,6</key>
+	<string>iPad mini (A1454)</string>
+	<key>iPad2,7</key>
+	<string>iPad mini (A1455)</string>
+	<key>iPad3,1</key>
+	<string>iPad (3rd gen, Wi-Fi)</string>
+	<key>iPad3,2</key>
+	<string>iPad (3rd gen, Wi-Fi + LTE Verizon)</string>
+	<key>iPad3,3</key>
+	<string>iPad (3rd gen, Wi0=-Fi + LTE AT&amp;T)</string>
+	<key>iPad3,4</key>
+	<string>iPad (4th gen, Wi-Fi)</string>
+	<key>iPad3,5</key>
+	<string>iPad (4th gen, A1459)</string>
+	<key>iPad3,6</key>
+	<string>iPad (4th gen, A1460)</string>
+	<key>iPad4,1</key>
+	<string>iPad Air (Wi-Fi)</string>
+	<key>iPad4,2</key>
+	<string>iPad Air (Wi-Fi + LTE)</string>
+	<key>iPad4,3</key>
+	<string>iPad Air (Rev)</string>
+	<key>iPad4,4</key>
+	<string>iPad mini 2 (Wi-Fi)</string>
+	<key>iPad4,5</key>
+	<string>iPad mini 2 (Wi-Fi+LTE)</string>
+	<key>iPad4,6</key>
+	<string>iPad mini 2 (Rev)</string>
+	<key>iPad4,7</key>
+	<string>iPad mini 3 (Wi-Fi)</string>
+	<key>iPad4,8</key>
+	<string>iPad mini 3 (A1600)</string>
+	<key>iPad4,9</key>
+	<string>iPad mini 3 (A1601)</string>
+	<key>iPad5,3</key>
+	<string>iPad Air 2 (Wi-Fi)</string>
+	<key>iPad5,4</key>
+	<string>iPad Air 2 (Wi-Fi + LTE)</string>
+	<key>iPod1,1</key>
+	<string>iPod touch</string>
+	<key>iPod2,1</key>
+	<string>iPod touch (2nd gen)</string>
+	<key>iPod3,1</key>
+	<string>iPod touch (3rd gen)</string>
+	<key>iPod4,1</key>
+	<string>iPod touch (4th gen)</string>
+	<key>iPod5,1</key>
+	<string>iPod touch (5th gen)</string>
+</dict>
+</plist>

@@ -21,7 +21,9 @@ Pod::Spec.new do |s|
 
   s.source_files = [ 'CommonAPIHelpers/*.{h,m}', 
                      'CommonAPIHelpers/HUD/*.{h,m}',
-                     'CommonAPIHelpers/MailController/*.{h,m}']
+                     'CommonAPIHelpers/MailController/*.{h,m}',
+                     'CommonAPIHelpers/ProductNamesFromModelVersion/*.{h,m}']
                      
-  s.resources = [ 'CommonAPIHelpers/HUD/*.{xcassets}']
+  s.resources = [ 'CommonAPIHelpers/HUD/*.{xcassets}',
+                  'CommonAPIHelpers/ProductNamesFromModelVersion/*.{plist}']
 end

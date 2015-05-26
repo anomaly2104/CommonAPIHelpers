@@ -6,6 +6,19 @@
       name = "CommonAPIHelpers">
       <Group
          location = "container:"
+         name = "ProductNamesFromModelVersion">
+         <FileRef
+            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/NSString+CAHProductNamesFromModelVersion.h">
+         </FileRef>
+         <FileRef
+            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/NSString+CAHProductNamesFromModelVersion.m">
+         </FileRef>
+         <FileRef
+            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/ProductNamesFromModelVersion.plist">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "MailController">
          <FileRef
             location = "group:CommonAPIHelpers/MailController/CAHMailController.h">
