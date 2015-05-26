@@ -84,7 +84,7 @@
 }
 
 - (NSString *)bodyWithDefaultMessage:(NSString *)message {
-  return [NSString stringWithFormat:@"\n\n\n\n-------------------------------\n%@\n\n%@\n%@\n%@",
+  return [NSString stringWithFormat:@"\n\n\n\n-------------------------------\n%@\n%@\n\n%@\n%@",
           message,
           DO_NOT_WRITE_BELOW,
           [self appSpecificInfo],
