@@ -95,10 +95,8 @@
 - (NSString *)currentDevice {
   NSString *model = [[UIDevice currentDevice] modelVersion];
   NSString *product = [model cah_productName];
-  if (product != nil) {
-    return [NSString stringWithFormat:@"%@ [%@]", product, model];
-  }
-  return [NSString stringWithFormat:@"%@", model];
+  NSString *stringToShow = product ?: model;
+  return [NSString stringWithFormat:@"%@", stringToShow];
 }
 
 - (NSString *)systemInfo {
