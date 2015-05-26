@@ -8,6 +8,7 @@
 #define OPERATING_SYSTEM_TEXT NSLocalizedString(@"Operating System", @"Operating System")
 #define APP_VERSION NSLocalizedString(@"App version", @"App version")
 #define DO_NOT_WRITE_BELOW NSLocalizedString(@"Please do not write/edit anything below this line", @"App version")
+#define APP_NAME NSLocalizedString(@"App name", @"App name")
 
 #define CONTACT_REQUEST_MAIL_SUBJECT NSLocalizedString(@"Contact request: %@", @"Contact request mail subject")
 #define CONTACT_REQUEST_MAIL_BODY NSLocalizedString(@"Contact request", @"Contact request mail body")
@@ -73,9 +74,9 @@
 #pragma mark -
 
 - (NSString *)appSpecificInfo {
-  NSString *appInfo = [NSString stringWithFormat:@"%@: %@",
-                          APP_VERSION,
-                          [self currentFullVersion]];
+  NSString *appInfo = [NSString stringWithFormat:@"%@: %@\n%@: %@",
+                       APP_VERSION, [self currentFullVersion],
+                       APP_NAME, [self currentAppName]];
   if (self.appSpecificDebugInfo != nil) {
     [appInfo stringByAppendingFormat:@"\n%@", self.appSpecificDebugInfo];
   }
