@@ -11,10 +11,10 @@
 @implementation NSString (CAHProductNamesFromModelVersion)
 
 - (NSString *)cah_productName {
-  NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"ProductNamesFromModelVersion"
-                                                                    ofType:@"plist"];
+  NSString *path = [[NSBundle mainBundle] pathForResource:@"ProductNamesFromModelVersion"
+                                                   ofType:@"plist"];
   NSDictionary *products = [NSDictionary dictionaryWithContentsOfFile:path];
-  return products[self] ?: self;
+  return products[self];
 }
 
 @end
