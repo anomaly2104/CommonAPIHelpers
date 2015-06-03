@@ -3,5 +3,6 @@ platform :ios, '7.0'
 xcodeproj 'CommonAPIHelpersDemoProject'
 workspace '../CommonAPIHelpers'
 
-pod 'CommonAPIHelpers', :path => '../'
-
+pod 'CommonAPIHelpers/CAHHUD', :path => '../'
+pod 'CommonAPIHelpers/CAHMailController', :path => '../'
+pod 'CommonAPIHelpers/CAHGoogleAnalyticsHelper', :path => '../'

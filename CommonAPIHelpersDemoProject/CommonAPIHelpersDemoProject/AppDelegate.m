@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import <CommonAPIHelpers/CommonAPIHelpers.h>
+#import <CommonAPIHelpers/CAHGoogleAnalyticsHelper.h>
 
 static NSString * const GAITrackingID = @"UA-46407224-3";
 
