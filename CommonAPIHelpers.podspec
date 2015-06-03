@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'CommonAPIHelpers'
-  s.version  = '0.4.2'
+  s.version  = '0.4.3'
   s.summary  = 'Library containing Helpers for some common APIs for ios'
   s.homepage = 'https://github.com/uditiiita/CommonAPIHelpers'
   s.author   = 'Udit Agarwal'
@@ -21,22 +21,19 @@ Pod::Spec.new do |s|
 
   s.subspec 'CAHHUD' do |ss|
     ss.dependency 'MBProgressHUD', '~> 0.9'
-    ss.source_files = ['CommonAPIHelpers/CAHHUD/*.{h,m}',
-                       'CommonAPIHelpers/CAHHUD.h']
+    ss.source_files = ['CommonAPIHelpers/CAHHUD/*.{h,m}']
     s.resources = [ 'CommonAPIHelpers/CAHHUD/*.{xcassets}']
   end
 
   s.subspec 'CAHMailController' do |ss|
     ss.dependency 'UIDevice-Helpers', '~> 0.0.1'
     ss.source_files = ['CommonAPIHelpers/CAHMailController/*.{h,m}',
-                       'CommonAPIHelpers/CAHMailController.h',
                        'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{h,m}']
     s.resources = [ 'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{plist}']
   end
 
   s.subspec 'CAHGoogleAnalyticsHelper' do |ss|
     ss.dependency 'GoogleAnalytics-iOS-SDK'
-    ss.source_files = ['CommonAPIHelpers/CAHGoogleAnalyticsHelper/*.{h,m}',
-                       'CommonAPIHelpers/CAHGoogleAnalyticsHelper.h']
+    ss.source_files = ['CommonAPIHelpers/CAHGoogleAnalyticsHelper/*.{h,m}']
   end
 end
