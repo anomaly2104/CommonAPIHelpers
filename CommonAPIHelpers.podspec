@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.subspec 'CAHHUD' do |ss|
     ss.dependency 'MBProgressHUD', '~> 0.9'
     ss.source_files = ['CommonAPIHelpers/CAHHUD/*.{h,m}']
-    ss.resources = [ 'CommonAPIHelpers/CAHHUD/*.{xcassets}']
   end
 
   s.subspec 'CAHMailController' do |ss|
