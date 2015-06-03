@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'CommonAPIHelpers'
-  s.version  = '0.4.4'
+  s.version  = '0.4.5'
   s.summary  = 'Library containing Helpers for some common APIs for ios'
   s.homepage = 'https://github.com/uditiiita/CommonAPIHelpers'
   s.author   = 'Udit Agarwal'
