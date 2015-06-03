@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "hud-cross-icon.png"
+      "filename" : "cah-hud-tick-icon.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "hud-cross-icon@2x.png"
+      "filename" : "cah-hud-tick-icon@2x.png"
     },
     {
       "idiom" : "universal",

@@ -5,55 +5,65 @@
       location = "group:CommonAPIHelpers"
       name = "CommonAPIHelpers">
       <Group
-         location = "container:"
-         name = "ProductNamesFromModelVersion">
+         location = "group:CAHGoogleAnalyticsHelper"
+         name = "CAHGoogleAnalyticsHelper">
          <FileRef
-            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/NSString+CAHProductNamesFromModelVersion.h">
+            location = "group:CAHGoogleAnalytics.h">
          </FileRef>
          <FileRef
-            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/NSString+CAHProductNamesFromModelVersion.m">
+            location = "group:CAHGoogleAnalytics.m">
          </FileRef>
          <FileRef
-            location = "group:CommonAPIHelpers/ProductNamesFromModelVersion/ProductNamesFromModelVersion.plist">
-         </FileRef>
-      </Group>
-      <Group
-         location = "container:"
-         name = "MailController">
-         <FileRef
-            location = "group:CommonAPIHelpers/MailController/CAHMailController.h">
+            location = "group:UIViewController+CAHGoogleAnalyticsAdditions.h">
          </FileRef>
          <FileRef
-            location = "group:CommonAPIHelpers/MailController/CAHMailController.m">
+            location = "group:UIViewController+CAHGoogleAnalyticsAdditions.m">
          </FileRef>
       </Group>
       <Group
-         location = "container:"
-         name = "HUD">
+         location = "group:CAHHUD"
+         name = "CAHHUD">
          <FileRef
-            location = "group:CommonAPIHelpers/HUD/MBProgressHUD+CAHAdditions.h">
+            location = "group:MBProgressHUD+CAHAdditions.h">
          </FileRef>
          <FileRef
-            location = "group:CommonAPIHelpers/HUD/MBProgressHUD+CAHAdditions.m">
+            location = "group:MBProgressHUD+CAHAdditions.m">
          </FileRef>
          <FileRef
-            location = "group:CommonAPIHelpers/HUD/HUD.xcassets">
+            location = "group:CAHHUD.xcassets">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:CAHMailController"
+         name = "CAHMailController">
+         <FileRef
+            location = "group:CAHMailController.h">
+         </FileRef>
+         <FileRef
+            location = "group:CAHMailController.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:CAHProductNamesFromModelVersion"
+         name = "CAHProductNamesFromModelVersion">
+         <FileRef
+            location = "group:CAHProductNamesFromModelVersion.plist">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+CAHProductNamesFromModelVersion.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+CAHProductNamesFromModelVersion.m">
          </FileRef>
       </Group>
       <FileRef
-         location = "group:CAHGoogleAnalytics.h">
+         location = "group:/Users/uditagarwal/work/iOS/CommonAPIHelpers/CommonAPIHelpers/CAHHUD.h">
       </FileRef>
       <FileRef
-         location = "group:CAHGoogleAnalytics.m">
+         location = "group:/Users/uditagarwal/work/iOS/CommonAPIHelpers/CommonAPIHelpers/CAHMailController.h">
       </FileRef>
       <FileRef
-         location = "group:CommonAPIHelpers.h">
-      </FileRef>
-      <FileRef
-         location = "group:UIViewController+CAHGoogleAnalyticsAdditions.h">
-      </FileRef>
-      <FileRef
-         location = "group:UIViewController+CAHGoogleAnalyticsAdditions.m">
+         location = "group:/Users/uditagarwal/work/iOS/CommonAPIHelpers/CommonAPIHelpers/CAHGoogleAnalyticsHelper.h">
       </FileRef>
    </Group>
    <FileRef

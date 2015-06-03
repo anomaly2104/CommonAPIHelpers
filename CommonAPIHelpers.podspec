@@ -11,19 +11,29 @@ Pod::Spec.new do |s|
   }
   s.requires_arc = true
 
-  s.dependency 'TDTChocolate/FoundationAdditions'
-  s.dependency 'GoogleAnalytics-iOS-SDK'
-  s.dependency 'MBProgressHUD', '~> 0.9'
-  s.dependency 'UIDevice-Helpers', '~> 0.0.1'
+  s.dependency 'TDTChocolate/FoundationAdditions'  
 
   s.platform = :ios, '5.0'
   s.header_mappings_dir = 'CommonAPIHelpers'
 
-  s.source_files = [ 'CommonAPIHelpers/*.{h,m}', 
-                     'CommonAPIHelpers/HUD/*.{h,m}',
-                     'CommonAPIHelpers/MailController/*.{h,m}',
-                     'CommonAPIHelpers/ProductNamesFromModelVersion/*.{h,m}']
-                     
-  s.resources = [ 'CommonAPIHelpers/HUD/*.{xcassets}',
-                  'CommonAPIHelpers/ProductNamesFromModelVersion/*.{plist}']
+  s.subspec 'CAHHUD' do |ss|
+    ss.dependency 'MBProgressHUD', '~> 0.9'
+    ss.source_files = ['CommonAPIHelpers/CAHHUD/*.{h,m}',
+                       'CommonAPIHelpers/CAHHUD.h']
+    s.resources = [ 'CommonAPIHelpers/CAHHUD/*.{xcassets}']
+  end
+
+  s.subspec 'CAHMailController' do |ss|
+    ss.dependency 'UIDevice-Helpers', '~> 0.0.1'
+    ss.source_files = ['CommonAPIHelpers/CAHMailController/*.{h,m}',
+                       'CommonAPIHelpers/CAHMailController.h',
+                       'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{h,m}']
+    s.resources = [ 'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{plist}']
+  end
+
+  s.subspec 'CAHGoogleAnalyticsHelper' do |ss|
+    ss.dependency 'GoogleAnalytics-iOS-SDK'
+    ss.source_files = ['CommonAPIHelpers/CAHGoogleAnalyticsHelper/*.{h,m}',
+                       'CommonAPIHelpers/CAHGoogleAnalyticsHelper.h']
+  end
 end
