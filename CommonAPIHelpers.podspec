@@ -14,9 +14,10 @@ Pod::Spec.new do |s|
 
   s.dependency 'TDTChocolate/FoundationAdditions'  
 
-  s.platform = :ios, '5.0'
+  s.platform = :ios, '6.0'
 
   s.public_header_files = ["CommonAPIHelpers/*.h"]
+  s.source_files = ["CommonAPIHelpers/CommonAPIHelpers.h"]
 
   s.subspec 'CAHHUD' do |ss|
     ss.dependency 'MBProgressHUD', '~> 0.9'

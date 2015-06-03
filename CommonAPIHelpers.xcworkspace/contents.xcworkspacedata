@@ -65,6 +65,9 @@
       <FileRef
          location = "group:/Users/uditagarwal/work/iOS/CommonAPIHelpers/CommonAPIHelpers/CAHGoogleAnalyticsHelper.h">
       </FileRef>
+      <FileRef
+         location = "group:CommonAPIHelpers.h">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:CommonAPIHelpersDemoProject/CommonAPIHelpersDemoProject.xcodeproj">
