@@ -15,21 +15,20 @@ Pod::Spec.new do |s|
   s.dependency 'TDTChocolate/FoundationAdditions'  
 
   s.platform = :ios, '5.0'
-  s.header_mappings_dir = 'CommonAPIHelpers'
 
   s.public_header_files = ["CommonAPIHelpers/*.h"]
 
   s.subspec 'CAHHUD' do |ss|
     ss.dependency 'MBProgressHUD', '~> 0.9'
     ss.source_files = ['CommonAPIHelpers/CAHHUD/*.{h,m}']
-    s.resources = [ 'CommonAPIHelpers/CAHHUD/*.{xcassets}']
+    ss.resources = [ 'CommonAPIHelpers/CAHHUD/*.{xcassets}']
   end
 
   s.subspec 'CAHMailController' do |ss|
     ss.dependency 'UIDevice-Helpers', '~> 0.0.1'
     ss.source_files = ['CommonAPIHelpers/CAHMailController/*.{h,m}',
                        'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{h,m}']
-    s.resources = [ 'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{plist}']
+    ss.resources = [ 'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{plist}']
   end
 
   s.subspec 'CAHGoogleAnalyticsHelper' do |ss|
