@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'CommonAPIHelpers'
-  s.version  = '0.4.0'
+  s.version  = '0.4.1'
   s.summary  = 'Library containing Helpers for some common APIs for ios'
   s.homepage = 'https://github.com/uditiiita/CommonAPIHelpers'
   s.author   = 'Udit Agarwal'
@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   s.platform = :ios, '5.0'
   s.header_mappings_dir = 'CommonAPIHelpers'
+
+  s.public_header_files = ["CommonAPIHelpers/*.h"]
 
   s.subspec 'CAHHUD' do |ss|
     ss.dependency 'MBProgressHUD', '~> 0.9'
