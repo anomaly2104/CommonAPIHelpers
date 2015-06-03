@@ -7,7 +7,8 @@ Pod::Spec.new do |s|
   s.license  = 'MIT'
   s.source   = {
     :git => 'git@github.com:uditiiita/CommonAPIHelpers.git',
-    :tag => "#{s.version}"
+    :tag => s.version, 
+    :submodules => true
   }
   s.requires_arc = true
 
