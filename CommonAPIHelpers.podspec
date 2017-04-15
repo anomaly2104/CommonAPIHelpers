@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
   s.name     = 'CommonAPIHelpers'
   s.version  = '0.4.6'
   s.summary  = 'Library containing Helpers for some common APIs for ios'
-  s.homepage = 'https://github.com/uditiiita/CommonAPIHelpers'
+  s.homepage = 'https://github.com/anomaly2104/CommonAPIHelpers'
   s.author   = 'Udit Agarwal'
   s.license  = 'MIT'
   s.source   = {
-    :git => 'git@github.com:uditiiita/CommonAPIHelpers.git',
+    :git => 'git@github.com:anomaly2104/CommonAPIHelpers.git',
     :tag => s.version, 
     :submodules => true
   }
