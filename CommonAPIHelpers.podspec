@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'CAHMailController' do |ss|
-    ss.dependency 'UIDevice-Helpers', '~> 0.0.1'
     ss.source_files = ['CommonAPIHelpers/CAHMailController/*.{h,m}',
                        'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{h,m}']
     ss.resources = [ 'CommonAPIHelpers/CAHProductNamesFromModelVersion/*.{plist}']

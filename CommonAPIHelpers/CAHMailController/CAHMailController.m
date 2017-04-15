@@ -1,6 +1,5 @@
 #import "CAHMailController.h"
 #import <MessageUI/MessageUI.h>
-#import <UIDevice-Helpers/UIDevice-Helpers.h>
 #import "NSString+CAHProductNamesFromModelVersion.h"
 
 #define FEATURE_REQUESTS_MAIL_SUBJECT NSLocalizedString(@"Requesting feature for %@", @"Feature request mail subject")
@@ -18,15 +17,18 @@
 @interface CAHMailController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) NSString *appSpecificDebugInfo;
+@property (nonatomic) NSString *deviceName;
 
 @end
 
 @implementation CAHMailController
 
-- (instancetype)initWithAppSpecificDebugInfo:(NSString *)appSpecificDebugInfo {
+- (instancetype)initWithDeviceName:(NSString *)deviceName
+              appSpecificDebugInfo:(NSString *)appSpecificDebugInfo {
   self = [super init];
   if (self) {
     _appSpecificDebugInfo = appSpecificDebugInfo;
+    _deviceName = deviceName;
   }
   return self;
 }
@@ -92,19 +94,12 @@
           [self systemInfo]];
 }
 
-- (NSString *)currentDevice {
-  NSString *model = [[UIDevice currentDevice] modelVersion];
-  NSString *product = [model cah_productName];
-  NSString *stringToShow = product ?: model;
-  return [NSString stringWithFormat:@"%@", stringToShow];
-}
-
 - (NSString *)systemInfo {
   NSString *osString = [NSString stringWithFormat:@"%@ %@",
                         [[UIDevice currentDevice] systemName],
                         [[UIDevice currentDevice] systemVersion]];
   return [NSString stringWithFormat:@"%@: %@\n%@: %@",
-          DEVICE_TEXT, [self currentDevice],
+          DEVICE_TEXT, self.deviceName,
           OPERATING_SYSTEM_TEXT, osString];
 }
 

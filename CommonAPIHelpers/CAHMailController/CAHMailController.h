@@ -2,7 +2,8 @@
 
 @interface CAHMailController : NSObject
 
-- (instancetype)initWithAppSpecificDebugInfo:(NSString *)appSpecificDebugInfo;
+- (instancetype)initWithDeviceName:(NSString *)deviceName
+              appSpecificDebugInfo:(NSString *)appSpecificDebugInfo;
 
 - (void)showContactRequestFromPresentingViewController:(UIViewController *)viewController
                                           contactEmail:(NSString *)contactEmail;
