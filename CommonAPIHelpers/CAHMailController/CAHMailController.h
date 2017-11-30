@@ -3,8 +3,8 @@
 @interface CAHMailAttachment : NSObject
 
 @property (nonatomic) NSString *mimeType;
-@property (nonatomic) NSData *data;
 @property (nonatomic) NSString *fileName;
+@property (nonatomic) NSData *data;
 
 @end
 
@@ -19,10 +19,13 @@
 - (void)showFeatureRequestFromPresentingViewController:(UIViewController *)viewController
                                           requestEmail:(NSString *)requestEmail;
 
+- (void)showSendFeedbackFromPresentingViewController:(UIViewController *)viewController
+                                        contactEmail:(NSString *)contactEmail
+                                         attachments:(NSArray<CAHMailAttachment *> *)attachments;
+
 - (void)showMailComposerWithSubject:(NSString *)subject
                                body:(NSString *)body
                           presenter:(UIViewController *)presenter
                           recipient:(NSString *)recipient
                         attachments:(NSArray<CAHMailAttachment *> *)attachments;
-
 @end

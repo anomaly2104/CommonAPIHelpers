@@ -13,6 +13,8 @@
 #define CONTACT_REQUEST_MAIL_SUBJECT NSLocalizedString(@"Contact request: %@", @"Contact request mail subject")
 #define CONTACT_REQUEST_MAIL_BODY NSLocalizedString(@"Contact request", @"Contact request mail body")
 
+#define SendFeedbackMailSubject NSLocalizedString(@"Send Feedback: %@", @"Contact request mail subject")
+#define SendFeedbackMailBody NSLocalizedString(@"Write your feedback above this horizontal line", @"feedback mail body")
 
 @interface CAHMailController () <MFMailComposeViewControllerDelegate>
 
@@ -45,6 +47,21 @@
                           presenter:viewController
                           recipient:contactEmail
                         attachments:nil];
+}
+
+#pragma mark Send Feedback
+
+- (void)showSendFeedbackFromPresentingViewController:(UIViewController *)viewController
+                                        contactEmail:(NSString *)contactEmail
+                                         attachments:(NSArray<CAHMailAttachment *> *)attachments {
+  NSString *subject = [NSString stringWithFormat:SendFeedbackMailSubject,
+                       [self currentAppName]];
+  NSString *body = [self bodyWithDefaultMessage:SendFeedbackMailBody];
+  [self showMailComposerWithSubject:subject
+                               body:body
+                          presenter:viewController
+                          recipient:contactEmail
+                        attachments:attachments];
 }
 
 #pragma mark Feature request
