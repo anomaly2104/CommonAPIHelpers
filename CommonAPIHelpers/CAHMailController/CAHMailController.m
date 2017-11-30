@@ -174,3 +174,7 @@
 @interface CAHMailAttachment ()
 
 @end
+
+@implementation CAHMailAttachment
+
+@end
