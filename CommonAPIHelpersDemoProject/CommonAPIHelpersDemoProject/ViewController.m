@@ -23,14 +23,14 @@
 }
 
 - (IBAction)infiniteTaskPressedSpinner {
-  [MBProgressHUD cah_showSpinnerToastWithText:@"Executing..."
-                               whileExecuting:@selector(infiniteTask)
-                                     onTarget:self];
+//  [MBProgressHUD cah_showSpinnerToastWithText:@"Executing..."
+//                               whileExecuting:@selector(infiniteTask)
+//                                     onTarget:self];
 }
 
 - (IBAction)tapItPressed:(id)sender {
   NSLog(@"Tap it pressed");
-  [MBProgressHUD cah_showSuccessToastWithText:@"succ"];
+//  [MBProgressHUD cah_showSuccessToastWithText:@"succ"];
 }
 
 - (IBAction)contactRequestPressed:(UIButton *)sender {
