@@ -1,6 +1,6 @@
 #import "ViewController.h"
 #import <CommonAPIHelpers/CAHMailController.h>
-#import <CommonAPIHelpers/CAHHUD.h>
+#import <CommonAPIHelpers/MBProgressHUD+CAHAdditions.h>
 
 @interface ViewController ()
 

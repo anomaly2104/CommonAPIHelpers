@@ -43,7 +43,8 @@
   [self showMailComposerWithSubject:subject
                                body:body
                           presenter:viewController
-                          recipient:contactEmail];
+                          recipient:contactEmail
+                        attachments:nil];
 }
 
 #pragma mark Feature request
@@ -56,7 +57,8 @@
   [self showMailComposerWithSubject:subject
                                body:body
                           presenter:viewController
-                          recipient:requestEmail];
+                          recipient:requestEmail
+                        attachments:nil];
 }
 
 - (NSString *)bodyForFeatureRequestsMail {
@@ -108,7 +110,8 @@
 - (void)showMailComposerWithSubject:(NSString *)subject
                                body:(NSString *)body
                           presenter:(UIViewController *)presenter
-                          recipient:(NSString *)recipient {
+                          recipient:(NSString *)recipient
+                        attachments:(NSArray<CAHMailAttachment *> *)attachments {
   if (![MFMailComposeViewController canSendMail]) {
     //TODO: Show some error or notify caller about this error
     NSLog(@"Could not open mail composer");
@@ -117,19 +120,28 @@
   MFMailComposeViewController *mailComposeController = nil;
   mailComposeController = [self createMailComposerViewControllerWithSubject:subject
                                                                        body:body
-                                                                  recipient:recipient];
+                                                                  recipient:recipient
+                                                                attachments:attachments];
   [presenter presentViewController:mailComposeController animated:YES completion:nil];
 }
 
 - (MFMailComposeViewController *)createMailComposerViewControllerWithSubject:(NSString *)subject
                                                                         body:(NSString *)body
-                                                                   recipient:(NSString *)recipient {
+                                                                   recipient:(NSString *)recipient
+                                                                 attachments:(NSArray<CAHMailAttachment *> *)attachments{
   MFMailComposeViewController *mailComposeController = [[MFMailComposeViewController alloc] init];
   mailComposeController.mailComposeDelegate = self;
   
   [mailComposeController setSubject:subject];
   [mailComposeController setToRecipients:@[recipient]];
   [mailComposeController setMessageBody:body isHTML:NO];
+  
+  for (CAHMailAttachment *attachment in attachments) {
+    [mailComposeController addAttachmentData:attachment.data
+                                    mimeType:attachment.mimeType
+                                    fileName:attachment.fileName];
+  }
+  
   return mailComposeController;
 }
 
