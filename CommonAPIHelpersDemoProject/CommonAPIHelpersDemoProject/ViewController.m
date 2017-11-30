@@ -12,7 +12,8 @@
 
 - (CAHMailController *)mailController {
   if (_mailController == nil) {
-    _mailController = [[CAHMailController alloc] initWithAppSpecificDebugInfo:@""];
+    _mailController = [[CAHMailController alloc] initWithDeviceName:@""
+                                               appSpecificDebugInfo:@""];
   }
   return _mailController;
 }
