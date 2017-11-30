@@ -1,11 +1,11 @@
 PODS:
-  - CommonAPIHelpers/CAHGoogleAnalyticsHelper (0.5.2):
+  - CommonAPIHelpers/CAHGoogleAnalyticsHelper (0.5.3):
     - GoogleAnalytics-iOS-SDK
     - TDTChocolate/FoundationAdditions
-  - CommonAPIHelpers/CAHHUD (0.5.2):
+  - CommonAPIHelpers/CAHHUD (0.5.3):
     - MBProgressHUD (~> 0.9)
     - TDTChocolate/FoundationAdditions
-  - CommonAPIHelpers/CAHMailController (0.5.2):
+  - CommonAPIHelpers/CAHMailController (0.5.3):
     - TDTChocolate/FoundationAdditions
   - GoogleAnalytics-iOS-SDK (3.12):
     - GoogleAnalytics-iOS-SDK/Core (= 3.12)
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CommonAPIHelpers: a452fb32d6203cee1897d9929fb33d0601a99c9b
+  CommonAPIHelpers: d11328afd9c0576281411e2a4b3680a28a36b1b1
   GoogleAnalytics-iOS-SDK: 13241762fa4aea845eb75bef6c0da3427a26e7b3
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   TDTChocolate: 85abf00b779241ea291296236976ba35ce77d37e
